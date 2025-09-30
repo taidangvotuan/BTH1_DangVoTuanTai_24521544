@@ -22,7 +22,7 @@ namespace Bai01
             return arr;
         }
 
-        // Hàm chia mod cho số nguyên
+        // Hàm chia mod cho số nguyên dương và số nguyên âm
         static int mod(int a, int b)
         {
             int r = a % b;

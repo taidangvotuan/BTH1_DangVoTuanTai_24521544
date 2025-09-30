@@ -10,7 +10,7 @@ namespace Bai04
     internal class Program
     {
         // Hàm tìm số ngày trong tháng
-        static byte TimSoNgayTrongThang(byte Thang, short Nam)
+        static byte TimSoNgayTrongThang(int Thang, int Nam)
         {
             if (Nam <= 0) return 0;
             if (Thang < 1 || Thang > 12) return 0;
@@ -44,21 +44,11 @@ namespace Bai04
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;     // Để in chữ Tiếng Việt không bị lỗi
-            byte Ngay, Thang;
-            short Nam;
-            do
-            {
-                Console.Write("Nhập ngày: ");
-                Ngay = byte.Parse(Console.ReadLine());
-                if (Ngay <= 0 || Ngay > 31)
-                    Console.WriteLine("Ngày phải nằm trong khoảng từ 1 đến 31. Vui lòng nhập lại.");
-            }
-            while (Ngay <= 0 || Ngay > 31);
-
+            int Thang, Nam;
             do
             {
                 Console.Write("Nhập tháng: ");
-                Thang = byte.Parse(Console.ReadLine());
+                Thang = int.Parse(Console.ReadLine());
                 if (Thang <= 0 || Thang > 12)
                     Console.WriteLine("Tháng phải nằm trong khoảng từ 1 đến 12. Vui lòng nhập lại.");
             }
@@ -67,7 +57,7 @@ namespace Bai04
             do
             {
                 Console.Write("Nhập năm: ");
-                Nam = short.Parse(Console.ReadLine());
+                Nam = int.Parse(Console.ReadLine());
                 if (Nam <= 0)
                     Console.WriteLine("Năm phải lớn hơn 0. Vui lòng nhập lại.");
             }
